@@ -67,6 +67,10 @@ body {
   color: var(--White);
   font-size: 0.8rem;
 }
+.active{
+  background-color: var(--Light_blue);
+  color: var(--Marine_blue);
+}
 .step_info {
   display: flex;
   flex-direction: column;
