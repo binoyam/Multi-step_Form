@@ -71,7 +71,7 @@ body {
   font-size: 0.8rem;
 }
 /* ACTIVE STEP */
-.active{
+.active {
   background-color: var(--Light_blue);
   color: var(--Marine_blue);
 }
@@ -84,13 +84,13 @@ body {
   text-transform: uppercase;
 }
 /* STEP INFO-> STEP NO. */
-.step_number{
+.step_number {
   font-size: 0.76rem;
   font-weight: 500;
   color: var(--Cool_gray);
 }
 /* STEP INFO-> STEP TITLE */
-.step_title{
+.step_title {
   font-size: 0.8rem;
   color: var(--White);
   font-weight: 700;
@@ -102,52 +102,69 @@ body {
 .form_container {
   max-width: 450px;
   min-height: 505px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  /* padding: 2rem 0; */
+  position: relative;
 }
 /* FORM HEADER */
-.form_header{
+.form_header {
   margin: 2rem 0;
 }
 /* FORM HEADER */
-.title{
+.title {
   color: var(--Marine_blue);
   font-weight: 700;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-.sub_title{
+.sub_title {
   color: var(--Cool_gray);
   font-size: 0.99rem;
   font-weight: 500;
 }
 /* FORM: STEP 1 */
-.step_one_form{
+.step_one_form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+.form_group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
 /* LABEL */
-label{
+label {
   color: var(--Marine_blue);
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
 /* INPUT */
-input{
+input {
   padding: 0.9rem 0.7rem;
-  border: 1px solid var(--Light_gray);
+  outline: 2px solid var(--Light_gray);
   border-radius: 0.3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-  color: var(--Cool_gray);
+  font-weight: 700;
+  color: var(--Marine_blue);
+  border: none;
   letter-spacing: 1px;
 }
-input:focus{
-  border: 1px solid var(--Purplish_blue);
+input:focus {
+  outline: 2px solid var(--Marine_blue);
+}
+/* ERROR TEXT "this filed is required" */
+.error_txt {
+  color: var(--Strawberry_red);
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
 }
 /* BUTTON */
-button{
+button {
   display: initial;
   max-width: 25%;
   color: var(--White);
@@ -157,31 +174,21 @@ button{
   font-weight: 700;
   letter-spacing: 1px;
   text-align: center;
-  align-self: flex-end;
-  justify-self: flex-end;
-  margin-top: 9rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  cursor: pointer;
 }
 
-
-form,.thankyou{
+form,
+.thankyou {
   display: none;
 }
-
-
 
 /* TASKS LEFT FOR FORM ONE  */
 /* FONT SIZE  */
 /* STEP CIRCLE TEXT NOT CENTERED? */
-/*FIX INPUT OUTLINE */
-/* ERROR ON INPUT */
 /* FIX BUTTON PLACEMENT */
-
-
-
-
-
-
-
 
 /* attribution */
 .attribution {
