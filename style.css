@@ -100,11 +100,12 @@ body {
 /* END OF SIDEBAR STYLES */
 
 /* FORM SECTION */
-.form_container {
+.step_one_container {
   max-width: 450px;
   min-height: 505px;
   height: 100%;
   display: flex;
+  display: none;
   flex-direction: column;
   position: relative;
 }
@@ -133,7 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
-  position: relative;
+  position: relative;/* for error text */
 }
 /* LABEL */
 label {
