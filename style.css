@@ -187,7 +187,35 @@ form,
   display: none;
 }
 
-/*step one done!*/
+/* STEP TWO FORM*/
+.step_two_form{
+  display: flex;
+  flex-direction: column;
+}
+
+.payment_plan{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* attribution */
 .attribution {

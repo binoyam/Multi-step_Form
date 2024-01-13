@@ -97,13 +97,30 @@
               You have the option of monthly or yearly billing.
             </p>
           </div>
-        </div>
-        <form action="">
+        
+        <form class="step_two_form">
            
-          Arcade $9/mo Advanced $12/mo Pro $15/mo Monthly Yearly Go Back Next
-          Step
-        </form>
+          
+          <label>
+            <input type="radio" name="plan" value="arcade" checked> Arcade $9/mo
+          </label>
+          <label>
+            <input type="radio" name="plan" value="advanced"> Advanced $12/mo
+          </label>
+          <label>
+            <input type="radio" name="plan" value="pro"> Pro $15/mo
+          </label>
+          <div class="payment_plan">
+            <label>
+              <input type="radio" name="frequency" value="monthly" checked> Monthly
+            </label>
+            <label>
+              <input type="radio" name="frequency" value="yearly"> Yearly
+            </label>
 
+          </div>
+        </form>
+      </div>
         <!-- Step 2 end -->
 
         <!-- Step 3 start -->
