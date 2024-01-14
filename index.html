@@ -64,23 +64,33 @@
           </div>
           <form class="step_one_form">
             <div class="form_group">
-              <label for="name">Name</label><span class="error_txt">This field is required</span>
-              <input type="text" id="name" placeholder="e.g.Stephen King" required />
-            </div>
-            <div class="form_group">
-              <label for="email">Email Address</label><span class="error_txt">This field is required</span>
+              <label for="name">Name</label
+              ><span class="error_txt">This field is required</span>
               <input
-                type="email"
-                id="email"
-                placeholder="e.g.stephenking@lorem.com" required
+                type="text"
+                id="name"
+                placeholder="e.g.Stephen King"
+                required
               />
             </div>
             <div class="form_group">
-              <label for="phone_number">Phone Number</label><span class="error_txt">This field is required</span>
+              <label for="email">Email Address</label
+              ><span class="error_txt">This field is required</span>
+              <input
+                type="email"
+                id="email"
+                placeholder="e.g.stephenking@lorem.com"
+                required
+              />
+            </div>
+            <div class="form_group">
+              <label for="phone_number">Phone Number</label
+              ><span class="error_txt">This field is required</span>
               <input
                 type="number"
                 placeholder="e.g.+1 234 567 890"
-                id="phone_number" required
+                id="phone_number"
+                required
               />
             </div>
 
@@ -97,30 +107,45 @@
               You have the option of monthly or yearly billing.
             </p>
           </div>
-        
-        <form class="step_two_form">
-           
-          
-          <label>
-            <input type="radio" name="plan" value="arcade" checked> Arcade $9/mo
-          </label>
-          <label>
-            <input type="radio" name="plan" value="advanced"> Advanced $12/mo
-          </label>
-          <label>
-            <input type="radio" name="plan" value="pro"> Pro $15/mo
-          </label>
-          <div class="payment_plan">
-            <label>
-              <input type="radio" name="frequency" value="monthly" checked> Monthly
-            </label>
-            <label>
-              <input type="radio" name="frequency" value="yearly"> Yearly
-            </label>
 
-          </div>
-        </form>
-      </div>
+          <form class="step_two_form">
+            <div class="billing_plan_wrapper">
+              <div class="billing_plan">
+                <label>
+                  <img src="./images/icon-arcade.svg" alt="arcade plan icon" />
+                  <input type="radio" name="plan" value="arcade" checked />
+                  Arcade $9/mo
+                </label>
+              </div>
+              <div class="billing_plan">
+                <label>
+                  <img
+                    src="./images/icon-advanced.svg"
+                    alt="advanced plan icon"
+                  />
+                  <input type="radio" name="plan" value="advanced" /> Advanced
+                  $12/mo
+                </label>
+              </div>
+              <div class="billing_plan">
+                <label>
+                  <img src="./images/icon-pro.svg" alt="pro plan icon" />
+                  <input type="radio" name="plan" value="pro" /> Pro $15/mo
+                </label>
+              </div>
+            </div>
+
+            <div class="billing_plan_switcher">
+              <label>
+                <input type="radio" name="frequency" value="monthly" checked />
+                Monthly
+              </label>
+              <label>
+                <input type="radio" name="frequency" value="yearly" /> Yearly
+              </label>
+            </div>
+          </form>
+        </div>
         <!-- Step 2 end -->
 
         <!-- Step 3 start -->

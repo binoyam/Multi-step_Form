@@ -192,8 +192,18 @@ form,
   display: flex;
   flex-direction: column;
 }
-
-.payment_plan{
+.billing_plan_wrapper{
+  display: flex;
+}
+.billing_plan{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.billing_plan img {
+  margin-bottom: 2rem;
+}
+.billing_plan_switcher{
   display: flex;
 }
 
