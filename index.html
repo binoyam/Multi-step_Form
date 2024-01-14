@@ -67,7 +67,7 @@
               <label class="label" for="name">Name</label
               ><span class="error_txt">This field is required</span>
               <input
-              class="input_field"
+                class="input_field"
                 type="text"
                 id="name"
                 placeholder="e.g.Stephen King"
@@ -78,7 +78,7 @@
               <label class="label" for="email">Email Address</label
               ><span class="error_txt">This field is required</span>
               <input
-              class="input_field"
+                class="input_field"
                 type="email"
                 id="email"
                 placeholder="e.g.stephenking@lorem.com"
@@ -89,7 +89,7 @@
               <label class="label" for="phone_number">Phone Number</label
               ><span class="error_txt">This field is required</span>
               <input
-              class="input_field"
+                class="input_field"
                 type="number"
                 placeholder="e.g.+1 234 567 890"
                 id="phone_number"
@@ -112,40 +112,37 @@
           </div>
 
           <form class="step_two_form">
-            <div class="billing_plan_wrapper">
-              <div class="billing_plan">
-                <label class="radio_container">
-                  <img
-                  class="plan_icon" src="./images/icon-arcade.svg" alt="arcade plan icon" />
-                  <input type="radio" name="plan" value="arcade" checked />
-                  <p>Arcade</p>
-                  <span class="plan_price">$9/mo</span>
-                </label>
-              </div>
-              <div class="billing_plan">
-                <label class="radio_container">
-                  <img
+            <div class="plans">
+              <div class="plan">
+                <img
                   class="plan_icon"
-                    src="./images/icon-advanced.svg"
-                    alt="advanced plan icon"
-                  />
-                  <input type="radio" name="plan" value="advanced" />
-                  <p>Advanced</p>
-                  <span class="plan_price">$12/mo</span>
-                </label>
+                  src="./images/icon-arcade.svg"
+                  alt="arcade plan icon"
+                />
+                <span class="plan_name">Arcade</span>
+                <span class="plan_price">$9/mo</span>
               </div>
-              <div class="billing_plan">
-                <label class="radio_container">
-                  <img
-                  class="plan_icon" src="./images/icon-pro.svg" alt="pro plan icon" />
-                  <input type="radio" name="plan" value="pro" />
-                  <p>Pro</p>
-                  <span class="plan_price">$15/mo</span>
-                </label>
+              <div class="plan">
+                <img
+                  class="plan_icon"
+                  src="./images/icon-advanced.svg"
+                  alt="advanced plan icon"
+                />
+                <span class="plan_name">Advanced</span>
+                <span class="plan_price">$12/mo</span>
+              </div>
+              <div class="plan">
+                <img
+                  class="plan_icon"
+                  src="./images/icon-pro.svg"
+                  alt="pro plan icon"
+                />
+                <span class="plan_name">Pro</span>
+                <span class="plan_price">$15/mo</span>
               </div>
             </div>
 
-            <div class="billing_plan_switcher">
+            <div class="plan_switcher">
               <label>
                 <input type="radio" name="frequency" value="monthly" checked />
                 Monthly
