@@ -27,6 +27,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+img{
+  max-width: 100%;
+}
 /* MAIN CARD */
 .main {
   max-width: 930px;
@@ -137,13 +140,13 @@ body {
   position: relative;/* for error text */
 }
 /* LABEL */
-label {
+.label {
   color: var(--Marine_blue);
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
 /* INPUT */
-input {
+.input_field {
   padding: 0.9rem 0.7rem;
   outline: 2px solid var(--Light_gray);
   border-radius: 0.3rem;
@@ -152,7 +155,7 @@ input {
   border: none;
   letter-spacing: 1px;
 }
-input:focus {
+.input_field:focus {
   outline: 2px solid var(--Marine_blue);
 }
 /* ERROR TEXT "this filed is required" */
@@ -166,7 +169,7 @@ input:focus {
   display: none;
 }
 /* BUTTON */
-button {
+.next_btn {
   display: initial;
   max-width: 25%;
   color: var(--White);
@@ -188,21 +191,35 @@ form,
 }
 
 /* STEP TWO FORM*/
+.step_two_container {
+  width: 450px;
+  /* min-height: 505px; */
+  height: 100%;
+}
 .step_two_form{
   display: flex;
   flex-direction: column;
 }
 .billing_plan_wrapper{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .billing_plan{
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 1rem;
 }
-.billing_plan img {
+.plan_icon {
   margin-bottom: 2rem;
 }
+/* .billing_plan input[type="radio"]{
+  position:absolute ;
+  opacity: 0;
+  pointer-events: none;
+} */
 .billing_plan_switcher{
   display: flex;
 }
@@ -223,7 +240,8 @@ form,
 
 
 
-
+/* give every input, label  
+class name. style by classname */
 
 
 
