@@ -195,6 +195,7 @@ form,
   width: 450px;
   /* min-height: 505px; */
   height: 100%;
+  position: relative;
 }
 .step_two_form {
   display: flex;
@@ -209,9 +210,12 @@ form,
 }
 .plan {
   width: 30%;
-  border: 1px solid var(--Purplish_blue) ;
   border-radius: 0.5rem;
   padding: 1rem 0.6rem;
+  border: 1px solid var(--Light_gray);
+}
+.selected{
+  border: 1px solid var(--Purplish_blue) ;
 }
 /* PLAN TITLE/NAME */
 .plan_name {
@@ -233,13 +237,83 @@ display: block;
 font-weight: 500;
 color: var(--Cool_gray);
 }
-.plan_switcher {
-  display: flex;
+.plan_toggle_switch {
+  
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 34px;
+
 }
 
-/* give every input, label  
-class name. style by classname */
+.toggle-input {
+  display: none;
+}
 
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-text {
+  position: absolute;
+  top: 7px;
+  color: #fff;
+  font-size: 14px;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.toggle-text:nth-of-type(1) {
+  left: 10px;
+  opacity: 1;
+}
+
+.toggle-text:nth-of-type(2) {
+  right: 10px;
+  opacity: 0;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #4CAF50;
+}
+
+.toggle-input:checked + .toggle-label::before {
+  transform: translateX(46px);
+}
+
+.toggle-input:checked ~ .toggle-text:nth-of-type(1) {
+  opacity: 0;
+}
+
+.toggle-input:checked ~ .toggle-text:nth-of-type(2) {
+  opacity: 1;
+}
+/* tasks left for step 2 */
+/* styke the toggle
+width and height of form
+font size
+next button and go back button
+*/
 /* attribution */
 .attribution {
   font-size: 11px;

@@ -113,7 +113,7 @@
 
           <form class="step_two_form">
             <div class="plans">
-              <div class="plan">
+              <div class="plan selected">
                 <img
                   class="plan_icon"
                   src="./images/icon-arcade.svg"
@@ -142,19 +142,14 @@
               </div>
             </div>
 
-            <div class="plan_switcher">
-              <label>
-                <input type="radio" name="frequency" value="monthly" checked />
-                Monthly
-              </label>
-              <label>
-                <input type="radio" name="frequency" value="yearly" /> Yearly
-              </label>
+            <div class="plan_toggle_switch">
+              <span class="toggle-text">Monthly</span>
+              <input type="checkbox" id="toggle" class="toggle-input" />
+              <label for="toggle" class="toggle-label"></label>
+              <span class="toggle-text">Yearly</span>
             </div>
-            <div class="buttons">
-              <button>Go back</button>
-              <button>Next step</button>
-            </div>
+
+            <button class="next_btn">Next step</button>
           </form>
         </div>
         <!-- Step 2 end -->
