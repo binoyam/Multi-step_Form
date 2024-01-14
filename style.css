@@ -27,7 +27,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-img{
+img {
   max-width: 100%;
 }
 /* MAIN CARD */
@@ -137,7 +137,7 @@ img{
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
-  position: relative;/* for error text */
+  position: relative; /* for error text */
 }
 /* LABEL */
 .label {
@@ -196,61 +196,49 @@ form,
   /* min-height: 505px; */
   height: 100%;
 }
-.step_two_form{
+.step_two_form {
   display: flex;
   flex-direction: column;
 }
-.plans{
+/* PLANS WRAPPER */
+.plans {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2.5rem;
 }
-.plan{
+.plan {
   width: 30%;
+  border: 1px solid var(--Purplish_blue) ;
+  border-radius: 0.5rem;
+  padding: 1rem 0.6rem;
 }
-.plan_name{
+/* PLAN TITLE/NAME */
+.plan_name {
   display: block;
   font-weight: 700;
   color: var(--Marine_blue);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
-.radio_container{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem;
-}
-
+/* PLAN ICON/IMG */
 .plan_icon {
   width: 40px;
   height: 40px;
   margin-bottom: 2rem;
 }
-
-.plan_switcher{
+/* PLAN PRICE */
+.plan_price{
+display: block;
+font-weight: 500;
+color: var(--Cool_gray);
+}
+.plan_switcher {
   display: flex;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* give every input, label  
 class name. style by classname */
-
-
 
 /* attribution */
 .attribution {
