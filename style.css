@@ -353,15 +353,21 @@ form,
   display: flex;
   flex-direction: column;
 }
-
-
-
-
-
-
-
-
-
+/* ADD ONS WRAPPER */
+.add_ons {
+  display: flex;
+  flex-direction: column;
+}
+/* INDIVIDUAL ADD ON OPTION */
+.add_on {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+/* ADD ON CHECKBOX */
+.add_on_checkbox {
+  margin-right: 1rem;
+}
 
 /* attribution */
 .attribution {
