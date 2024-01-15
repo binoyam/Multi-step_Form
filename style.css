@@ -341,7 +341,7 @@ form,
   color: var(--Cool_gray);
   font-size: 1rem;
 }
-.go_back_btn:hover{
+.go_back_btn:hover {
   color: var(--Marine_blue);
 }
 /* END OF STEP THREE */
@@ -376,15 +376,15 @@ form,
   margin-right: 1.5rem;
 }
 /* ADD ON DESCRIPTION */
-.add_on_title{
+.add_on_title {
   color: var(--Marine_blue);
   margin-bottom: 0.2rem;
 }
-.add_on_sub_title{
+.add_on_sub_title {
   color: var(--Cool_gray);
 }
 /* ADDON PRICE */
-.add_on_price{
+.add_on_price {
   position: absolute;
   right: 1rem;
   color: var(--Marine_blue);
@@ -394,16 +394,6 @@ form,
 .selected {
   border: 1px solid var(--Purplish_blue);
 }
-
-
-
-
-
-
-
-
-
-
 
 /* attribution */
 .attribution {
