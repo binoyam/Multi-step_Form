@@ -350,7 +350,7 @@ form,
   width: 100%;
   height: 100%;
   position: relative;
-  display: none;
+  /* display: none; */
 }
 .step_three_form {
   display: flex;
@@ -361,21 +361,46 @@ form,
   display: flex;
   flex-direction: column;
 }
-/* INDIVIDUAL ADD ON OPTION/LABEL */
+/* INDIVIDUAL ADD ON OPTION /LABEL */
 .add_on {
   display: flex;
   align-items: center;
   padding: 1rem;
-  position: relative;
+  padding-left: calc(1rem + 35px);
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--Light_gray);
   cursor: pointer;
+  position: relative;
 }
 /* ADD ON CHECKBOX */
-.add_on_checkbox {
-  margin-right: 1.5rem;
+.checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
 }
+.custom_checkbox {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: var(--White);
+  border: 1px solid var(--Cool_gray);
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+.checkbox:checked ~ .custom_checkbox {
+  background-image: url(./images/icon-checkmark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: var(--Purplish_blue);
+  border: 1px solid var(--Purplish_blue);
+}
+
 /* ADD ON DESCRIPTION */
 .add_on_title {
   color: var(--Marine_blue);
@@ -392,10 +417,6 @@ form,
   font-size: 1rem;
   font-weight: 500;
 }
-.selected {
-  border: 1px solid var(--Purplish_blue);
-  /* background-color: var(--Magnolia); */
-}
 
 /* END OF STEP THREE */
 
@@ -403,16 +424,5 @@ form,
   width: 100%;
   height: 100%;
   position: relative;
-  /* display: none; */
+  display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
