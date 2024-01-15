@@ -361,7 +361,7 @@ form,
   display: flex;
   flex-direction: column;
 }
-/* INDIVIDUAL ADD ON OPTION */
+/* INDIVIDUAL ADD ON OPTION/LABEL */
 .add_on {
   display: flex;
   align-items: center;
@@ -370,6 +370,7 @@ form,
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--Light_gray);
+  cursor: pointer;
 }
 /* ADD ON CHECKBOX */
 .add_on_checkbox {
@@ -395,14 +396,16 @@ form,
   border: 1px solid var(--Purplish_blue);
 }
 
-/* attribution */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
