@@ -191,7 +191,7 @@
                 <span class="add_on_price">+$2/mo</span>
               </label>
               <label class="add_on">
-                <input class="checkbox" type="checkbox"/>
+                <input class="checkbox" type="checkbox" />
                 <span class="custom_checkbox"></span>
 
                 <div class="details">
@@ -217,12 +217,35 @@
               Double-check everything looks OK before confirming.
             </p>
           </div>
-        </div>
-        <form class="step_four_form">
           <!-- Dynamically add subscription and add-on selections here -->
-
-          Total (per month/year) Go Back Confirm
-        </form>
+          <div class="summary_wrapper">
+            <div class="summary_header">
+              <div class="selected_plan">
+                <p class="selected_plan_title">Arcade (Monthly)</p>
+                <button class="change_plan_btn">Change</button>
+              </div>
+              <span class="selected_plan_price">$9/mo</span>
+            </div>
+            <ul class="addons_summary">
+              <li class="list">
+                <p class="selected_addon_title">Online service</p>
+                <span class="add_on_price_sum">+$1/mo</span>
+              </li>
+              <li class="list">
+                <p class="selected_addon_title">Larger storage</p>
+                <span class="add_on_price_sum">+$2/mo</span>
+              </li>
+            </ul>
+            <div class="summary_total_wrapper">
+              <p class="total_title">Total (per month)</p>
+              <span class="total_price">+$12/mo</span>
+            </div>
+            <div class="buttons">
+              <button class="go_back_btn">Go Back</button>
+              <button class="step_two_next_btn">Next Step</button>
+            </div>
+          </div>
+        </div>
 
         <!-- Step 4 end -->
 
