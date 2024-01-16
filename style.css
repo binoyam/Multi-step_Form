@@ -380,6 +380,7 @@ form,
   opacity: 0;
   position: absolute;
 }
+/* CUSTOM CHECKBOX */
 .custom_checkbox {
   position: absolute;
   top: 50%;
