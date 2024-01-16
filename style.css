@@ -367,11 +367,14 @@ form,
   align-items: center;
   padding: 1rem;
   padding-left: calc(1rem + 35px);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 0.5rem;
   border: 1px solid var(--Light_gray);
   cursor: pointer;
   position: relative;
+}
+.selected_addon{
+  border: 1px solid var(--Purplish_blue);
 }
 /* ADD ON CHECKBOX */
 .checkbox {
