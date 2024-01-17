@@ -373,7 +373,7 @@ form,
   cursor: pointer;
   position: relative;
 }
-.selected_addon{
+.selected_addon {
   border: 1px solid var(--Purplish_blue);
 }
 /* ADD ON CHECKBOX */
@@ -432,13 +432,42 @@ form,
   /* display: none; */
 }
 /* SUMMARY STEP */
-.summary_wrapper{
+.summary_wrapper {
   padding: 1rem;
   background-color: var(--Magnolia);
   border-radius: 0.4rem;
 }
-.summary_header{
+/* SUMMARY TOP HEADER */
+.summary_header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--Light_gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* SELECTED PLAN NAME */
+.selected_plan {
+  color: var(--Marine_blue);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+/* CHANGE BUTTON */
+.change_plan_btn {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.change_plan_btn:hover {
+  color: var(--Purplish_blue);
+  font-weight: 500;
+}
+/* SELECTED PLAN PRICE */
+.selected_plan_price{
+  color: var(--Marine_blue);
+  font-weight: 700;
+  font-size: 1.2rem;
 }
