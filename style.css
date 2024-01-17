@@ -436,10 +436,11 @@ form,
   padding: 1rem;
   background-color: var(--Magnolia);
   border-radius: 0.4rem;
+  margin-bottom: 2rem;
 }
 /* SUMMARY TOP HEADER */
 .summary_header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--Light_gray);
   display: flex;
@@ -460,14 +461,54 @@ form,
   text-decoration: underline;
   cursor: pointer;
   font-size: 1rem;
+  color: var(--Cool_gray);
+  font-weight: 500;
 }
 .change_plan_btn:hover {
   color: var(--Purplish_blue);
-  font-weight: 500;
 }
-/* SELECTED PLAN PRICE */
+/* SUMMARY: SELECTED PLAN PRICE */
 .selected_plan_price{
   color: var(--Marine_blue);
   font-weight: 700;
   font-size: 1.2rem;
+}
+/* SUMMARY: SELCETED ADDONS  */
+.addons_summary{
+  list-style: none;
+}
+/* SUMMARY: ADDON INDIVIDUAL */
+.list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+/*SUMMARY: SELECTED PLAN TITLE */
+.selected_addon_title{
+  color: var(--Cool_gray);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+/*SUMMARY: SELECTED PLAN PRICE */
+.add_on_price_sum{
+  color: var(--Marine_blue);
+  font-weight: 500;
+  font-size: 1rem;
+}
+/*  SUMMARY: TOTAL PRICE SECTION */
+.summary_total_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.total_title{
+  color: var(--Cool_gray);
+  font-weight: 500;
+}
+.total_price{
+  color: var(--Purplish_blue);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
