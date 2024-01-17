@@ -1,0 +1,152 @@
+/* STEP TWO FORM*/
+.step_two_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+.step_two_form {
+  display: flex;
+  flex-direction: column;
+}
+/* PLANS WRAPPER */
+.plans {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.plan {
+  width: 30%;
+  padding: 1rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light_gray);
+}
+.selected {
+  border: 1px solid var(--Purplish_blue);
+}
+/* PLAN TITLE/NAME */
+.plan_name {
+  display: block;
+  font-weight: 700;
+  color: var(--Marine_blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+/* PLAN ICON/IMG */
+.plan_icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 2rem;
+}
+/* PLAN PRICE */
+.plan_price {
+  display: block;
+  font-weight: 500;
+  color: var(--Cool_gray);
+}
+.text_add {
+  display: none;
+  /* display: block; */
+  color: var(--Marine_blue);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+/* TOGGLE SWITCH */
+.plan_toggle_switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Magnolia);
+  padding: 0.4rem 0;
+}
+/* */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+  margin: 0 1rem;
+}
+
+.toggle_input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* SIDER/ HANDLE */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--Marine_blue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--White);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle_input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.toggle_input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+.monthly,
+.yearly {
+  color: var(--Cool_gray);
+}
+/* END OF TOGGLE SWITCH */
+/* STEP TWO BUTTONS WRAPPER */
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 2rem;
+}
+/* STEP TWO NEXT BUTTON */
+.step_two_next_btn {
+  max-width: 25%;
+  color: var(--White);
+  padding: 0.8rem 1rem;
+  background-color: var(--Marine_blue);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+}
+/* STEP TWO GOBACK BUTTON */
+.go_back_btn {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--Cool_gray);
+  font-size: 1rem;
+}
+.go_back_btn:hover {
+  color: var(--Marine_blue);
+}
+/* END OF STEP THREE */

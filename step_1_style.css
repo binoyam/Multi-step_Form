@@ -1,0 +1,81 @@
+/* STEP ONE CONTAINER */
+.step_one_container {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  position: relative;
+}
+/* FORM HEADER */
+.form_header {
+  margin-bottom: 2rem;
+}
+/* FORM HEADER */
+.title {
+  color: var(--Marine_blue);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.sub_title {
+  color: var(--Cool_gray);
+  font-size: 0.99rem;
+  font-weight: 500;
+}
+/* FORM: STEP 1 */
+.step_one_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.form_group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative; /* for error text */
+}
+/* LABEL */
+.label {
+  color: var(--Marine_blue);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+/* INPUT */
+.input_field {
+  padding: 0.9rem 0.7rem;
+  outline: 2px solid var(--Light_gray);
+  border-radius: 0.3rem;
+  font-weight: 700;
+  color: var(--Marine_blue);
+  border: none;
+  letter-spacing: 1px;
+}
+.input_field:focus {
+  outline: 2px solid var(--Marine_blue);
+}
+/* ERROR TEXT "this filed is required" */
+.error_txt {
+  color: var(--Strawberry_red);
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+/* BUTTON */
+.next_btn {
+  display: initial;
+  max-width: 25%;
+  color: var(--White);
+  padding: 0.8rem 1rem;
+  background-color: var(--Marine_blue);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  cursor: pointer;
+}
