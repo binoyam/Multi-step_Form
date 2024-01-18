@@ -124,18 +124,7 @@
   position: absolute;
   bottom: 2rem;
 }
-/* STEP TWO NEXT BUTTON */
-.step_two_next_btn {
-  max-width: 25%;
-  color: var(--White);
-  padding: 0.8rem 1rem;
-  background-color: var(--Marine_blue);
-  border-radius: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: center;
-  cursor: pointer;
-}
+
 /* STEP TWO GOBACK BUTTON */
 .go_back_btn {
   padding: 0;
