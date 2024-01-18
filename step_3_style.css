@@ -1,8 +1,5 @@
 /* STEP THREE */
-.step_three_container {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.step_3{
   display: none;
 }
 .step_three_form {

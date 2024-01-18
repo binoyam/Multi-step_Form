@@ -1,8 +1,5 @@
 /* STEP 4 */
-.step_four_container {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.step_4 {
   display: none;
 }
 /* SUMMARY STEP */
