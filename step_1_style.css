@@ -1,6 +1,7 @@
-/* STEP ONE CONTAINER */
+/* STEP ONE */
 .step_1 {
   display: block;
+  /* display: none; */
 }
 
 /* FORM: STEP 1 */
