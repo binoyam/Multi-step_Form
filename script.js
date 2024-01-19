@@ -1,11 +1,17 @@
 const stepOneForm = document.getElementById("step_one_form");
-const stepOneNextBtn = document.getElementById("step_one_next")
-stepOneForm.addEventListener("submit", verifyStepOne)
-stepOneNextBtn.addEventListener("click", verifyStepOne)
+const stepOneNextBtn = document.getElementById("step_one_next");
+var nameError = document.querySelectorAll(".error_txt");
 
-const verifyStepOne = (e) => {
-    e.preventDefault();
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const phoneInput = document.getElementById("phone_number");
+stepOneForm.addEventListener("submit", stepOneCheck);
+
+function stepOneCheck(e) {
+  e.preventDefault();
+  var nameInput = document.getElementById("name").value;
+
+  if (nameInput === "") {
+    nameError.style.display === "block";
+  } else {
+    nameError.style.display === "none";
+  }
 }
+/* im stuck */
