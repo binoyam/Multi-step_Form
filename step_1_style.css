@@ -36,7 +36,9 @@
   outline: 2px solid var(--Marine_blue);
 }
 /* ERROR TEXT "this filed is required" */
-.error_txt {
+.name_error,
+.email_error,
+.phone_error {
   color: var(--Strawberry_red);
   font-weight: 700;
   font-size: 0.8rem;
@@ -44,4 +46,7 @@
   top: 0;
   right: 0;
   display: none;
+}
+.error_border{
+  outline: 1px solid var(--Strawberry_red);
 }
