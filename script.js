@@ -2,8 +2,10 @@ const stepOneForm = document.getElementById("step_one_form");
 const stepOneNextBtn = document.getElementById("step_one_next");
 const stepOne = document.querySelector(".step_1");
 const stepTwo = document.querySelector(".step_2");
-stepOneForm.addEventListener("submit", stepOneCheck);
+const stepCircle = document.querySelectorAll(".step_circle");
 
+stepOneForm.addEventListener("submit", stepOneCheck);
+let step = 0;
 function stepOneCheck(e) {
   e.preventDefault();
   const nameInput = document.getElementById("name");
@@ -42,6 +44,11 @@ function stepOneCheck(e) {
   ) {
     stepOne.style.display = "none";
     stepTwo.style.display = "block";
+    step++;
+    stepCircle.forEach((circle) => {
+      circle.classList.remove("active");
+    });
+    stepCircle[step].classList.add("active");
   } else {
     stepOne.style.display = "block";
     stepTwo.style.display = "none";
