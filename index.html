@@ -57,168 +57,173 @@
         </div>
       </div>
       <!-- Sidebar end -->
-      
+
       <!-- Form start  -->
 
       <div class="form_section_wrapper">
         <!-- Step 1 start -->
-        <div class="step_container step_1">
-          <div class="form_header">
-            <h1 class="title">Personal info</h1>
-            <p class="sub_title">
-              Please provide your name, email address, and phone number.
-            </p>
+        <form action="#">
+          <div class="step_container" id="step_1">
+            <div class="form_header">
+              <h1 class="title">Personal info</h1>
+              <p class="sub_title">
+                Please provide your name, email address, and phone number.
+              </p>
+            </div>
+
+            <div class="step_one_form" id="step_one_form">
+              <div class="form_group">
+                <label class="label" for="name">Name</label
+                ><span class="name_error">This field is required</span>
+                <input
+                  class="input_field"
+                  type="text"
+                  id="name"
+                  placeholder="e.g.Stephen King"
+                />
+              </div>
+              <div class="form_group">
+                <label class="label" for="email">Email Address</label
+                ><span class="email_error">This field is required</span>
+                <input
+                  class="input_field"
+                  type="email"
+                  id="email"
+                  placeholder="e.g.stephenking@lorem.com"
+                />
+              </div>
+              <div class="form_group">
+                <label class="label" for="phone_number">Phone Number</label
+                ><span class="phone_error">This field is required</span>
+                <input
+                  class="input_field"
+                  type="number"
+                  placeholder="e.g.+1 234 567 890"
+                  id="phone_number"
+                />
+              </div>
+              <div class="next_btn_wrapper">
+                <button class="next_btn" type="submit" id="next_btn_1">
+                  Next Step
+                </button>
+              </div>
+            </div>
           </div>
-          <form class="step_one_form" id="step_one_form">
-            <div class="form_group">
-              <label class="label" for="name">Name</label
-              ><span class="name_error">This field is required</span>
-              <input
-                class="input_field"
-                type="text"
-                id="name"
-                placeholder="e.g.Stephen King"
-               
-              />
-            </div>
-            <div class="form_group">
-              <label class="label" for="email">Email Address</label
-              ><span class="email_error">This field is required</span>
-              <input
-                class="input_field"
-                type="email"
-                id="email"
-                placeholder="e.g.stephenking@lorem.com"
-           
-              />
-            </div>
-            <div class="form_group">
-              <label class="label" for="phone_number">Phone Number</label
-              ><span class="phone_error">This field is required</span>
-              <input
-                class="input_field"
-                type="number"
-                placeholder="e.g.+1 234 567 890"
-                id="phone_number"
-               
-              />
-            </div>
-            <div class="next_btn_wrapper">
-              <button class="next_btn" type="submit" id="next_btn">Next Step</button>
-            </div>
-          </form>
-        </div>
-        <!-- Step 1 end -->
+          <!-- Step 1 end -->
 
-        <!-- Step 2 start -->
-        <div class="step_container step_2">
-          <div class="form_header">
-            <h1 class="title">Select your plan</h1>
-            <p class="sub_title">
-              You have the option of monthly or yearly billing.
-            </p>
+          <!-- Step 2 start -->
+          <div class="step_container" id="step_2">
+            <div class="form_header">
+              <h1 class="title">Select your plan</h1>
+              <p class="sub_title">
+                You have the option of monthly or yearly billing.
+              </p>
+            </div>
+
+            <div class="step_two_form">
+              <div class="plans">
+                <div class="plan selected">
+                  <img
+                    class="plan_icon"
+                    src="./images/icon-arcade.svg"
+                    alt="arcade plan icon"
+                  />
+                  <span class="plan_name">Arcade</span>
+                  <span class="plan_price">$9/mo</span>
+                  <span class="text_add">2 months free</span>
+                </div>
+                <div class="plan">
+                  <img
+                    class="plan_icon"
+                    src="./images/icon-advanced.svg"
+                    alt="advanced plan icon"
+                  />
+                  <span class="plan_name">Advanced</span>
+                  <span class="plan_price">$12/mo</span>
+                  <span class="text_add">2 months free</span>
+                </div>
+                <div class="plan">
+                  <img
+                    class="plan_icon"
+                    src="./images/icon-pro.svg"
+                    alt="pro plan icon"
+                  />
+                  <span class="plan_name">Pro</span>
+                  <span class="plan_price">$15/mo</span>
+                  <span class="text_add">2 months free</span>
+                </div>
+              </div>
+
+              <div class="plan_toggle_switch">
+                <span class="monthly">Monthly</span>
+                <label class="switch">
+                  <input type="checkbox" class="toggle_input" />
+                  <span class="slider"></span>
+                </label>
+                <span class="yearly">Yearly</span>
+              </div>
+              <div class="buttons">
+                <button class="go_back_btn" id="back_btn">Go Back</button>
+                <button class="next_btn" type="submit" id="next_btn_2">
+                  Next Step
+                </button>
+              </div>
+            </div>
           </div>
+          <!-- Step 2 end -->
 
-          <form class="step_two_form">
-            <div class="plans">
-              <div class="plan selected">
-                <img
-                  class="plan_icon"
-                  src="./images/icon-arcade.svg"
-                  alt="arcade plan icon"
-                />
-                <span class="plan_name">Arcade</span>
-                <span class="plan_price">$9/mo</span>
-                <span class="text_add">2 months free</span>
-              </div>
-              <div class="plan">
-                <img
-                  class="plan_icon"
-                  src="./images/icon-advanced.svg"
-                  alt="advanced plan icon"
-                />
-                <span class="plan_name">Advanced</span>
-                <span class="plan_price">$12/mo</span>
-                <span class="text_add">2 months free</span>
-              </div>
-              <div class="plan">
-                <img
-                  class="plan_icon"
-                  src="./images/icon-pro.svg"
-                  alt="pro plan icon"
-                />
-                <span class="plan_name">Pro</span>
-                <span class="plan_price">$15/mo</span>
-                <span class="text_add">2 months free</span>
-              </div>
+          <!-- Step 3 start -->
+          <div class="step_container" id="step_3">
+            <div class="form_header">
+              <h1 class="title">Pick add-ons</h1>
+              <p class="sub_title">
+                Add-ons help enhance your gaming experience.
+              </p>
             </div>
+            <div class="step_three_form">
+              <div class="addons">
+                <label class="add_on selected_addon">
+                  <input class="checkbox" type="checkbox" checked />
+                  <span class="custom_checkbox"></span>
+                  <div class="details">
+                    <h3 class="add_on_title">Online service</h3>
+                    <p class="add_on_sub_title">Access to multiplayer games</p>
+                  </div>
+                  <span class="add_on_price">+$1/mo</span>
+                </label>
+                <label class="add_on selected_addon">
+                  <input class="checkbox" type="checkbox" checked />
+                  <span class="custom_checkbox"></span>
 
-            <div class="plan_toggle_switch">
-              <span class="monthly">Monthly</span>
-              <label class="switch">
-                <input type="checkbox" class="toggle_input" />
-                <span class="slider"></span>
-              </label>
-              <span class="yearly">Yearly</span>
+                  <div class="details">
+                    <h3 class="add_on_title">Larger storage</h3>
+                    <p class="add_on_sub_title">Extra 1TB of cloud save</p>
+                  </div>
+                  <span class="add_on_price">+$2/mo</span>
+                </label>
+                <label class="add_on">
+                  <input class="checkbox" type="checkbox" />
+                  <span class="custom_checkbox"></span>
+
+                  <div class="details">
+                    <h3 class="add_on_title">Customizable Profile</h3>
+                    <p class="add_on_sub_title">Custom theme on your profile</p>
+                  </div>
+                  <span class="add_on_price">+$2/mo</span>
+                </label>
+              </div>
             </div>
             <div class="buttons">
               <button class="go_back_btn" id="back_btn">Go Back</button>
-              <button class="next_btn" type="submit" id="next_btn">Next Step</button>
+              <button class="next_btn" type="submit" id="next_btn_3">
+                Next Step
+              </button>
             </div>
-          </form>
-        </div>
-        <!-- Step 2 end -->
-
-        <!-- Step 3 start -->
-        <div class="step_container step_3">
-          <div class="form_header">
-            <h1 class="title">Pick add-ons</h1>
-            <p class="sub_title">
-              Add-ons help enhance your gaming experience.
-            </p>
           </div>
-          <form class="step_three_form">
-            <div class="addons">
-              <label class="add_on selected_addon">
-                <input class="checkbox" type="checkbox" checked />
-                <span class="custom_checkbox"></span>
-                <div class="details">
-                  <h3 class="add_on_title">Online service</h3>
-                  <p class="add_on_sub_title">Access to multiplayer games</p>
-                </div>
-                <span class="add_on_price">+$1/mo</span>
-              </label>
-              <label class="add_on selected_addon">
-                <input class="checkbox" type="checkbox" checked />
-                <span class="custom_checkbox"></span>
-
-                <div class="details">
-                  <h3 class="add_on_title">Larger storage</h3>
-                  <p class="add_on_sub_title">Extra 1TB of cloud save</p>
-                </div>
-                <span class="add_on_price">+$2/mo</span>
-              </label>
-              <label class="add_on">
-                <input class="checkbox" type="checkbox" />
-                <span class="custom_checkbox"></span>
-
-                <div class="details">
-                  <h3 class="add_on_title">Customizable Profile</h3>
-                  <p class="add_on_sub_title">Custom theme on your profile</p>
-                </div>
-                <span class="add_on_price">+$2/mo</span>
-              </label>
-            </div>
-          </form>
-          <div class="buttons">
-            <button class="go_back_btn" id="back_btn">Go Back</button>
-            <button class="next_btn" type="submit" id="next_btn">Next Step</button>
-          </div>
-        </div>
-        <!-- Step 3 end -->
-
+          <!-- Step 3 end -->
+        </form>
         <!-- Step 4 start -->
-        <div class="step_container step_4">
+        <div class="step_container step_4" id="step_4">
           <div class="form_header">
             <h1 class="title">Finishing up</h1>
             <p class="sub_title">
@@ -251,7 +256,9 @@
           </div>
           <div class="buttons">
             <button class="go_back_btn" id="back_btn">Go Back</button>
-            <button class="next_btn" type="submit" id="next_btn">Next Step</button>
+            <button class="next_btn" type="submit" id="next_btn_4">
+              Next Step
+            </button>
           </div>
         </div>
         <!-- Step 4 end -->
@@ -269,7 +276,6 @@
         <!-- Step 5 end -->
       </div>
       <!-- Form end  -->
-
     </main>
 
     <div class="attribution">

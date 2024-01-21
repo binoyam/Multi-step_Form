@@ -1,30 +1,11 @@
-const nextBtn = document.getElementById("next_btn");
-const backBtn = document.getElementById("back_btn");
-const steps = Array.from(document.querySelectorAll(".step_container"));
-let currentStep = 0;
-// console.log(steps.length);
+const allSteps = document.querySelectorAll(".step_container");
+const step_one_nextBtn = document.getElementById("next_btn_1");
+const step_two_nextBtn = document.getElementById("next_btn_2");
+const step_three_nextBtn = document.getElementById("next_btn_3");
+const step_four_nextBtn = document.getElementById("next_btn_4");
 
-function showStep(stepIndex) {
-  steps.forEach((step) => {
-    step.style.display = "none";
-  });
-  steps[stepIndex].style.display = "block";
-}
+step_two_nextBtn.addEventListener("click", );
+step_three_nextBtn.addEventListener("click", );
+step_four_nextBtn.addEventListener("click", );
 
-function nextStep() {
-  if (currentStep < steps.length - 1) {
-    currentStep++;
-    showStep(currentStep);
-  }
-}
 
-function previousStep() {
-  if (currentStep > 0) {
-    currentStep--;
-    showStep(currentStep);
-  }
-}
-//stuckkkk!!!!!!!!
-// stepOneForm.addEventListener("submit", stepOneCheck);
-nextBtn.addEventListener("click", nextStep);
-backBtn.addEventListener("click", previousStep);
