@@ -16,7 +16,8 @@ function showStep(stepNumber) {
   });
   if (stepNumber == 5) {
     document.getElementById("step_4").style.display = "none";
-    completedForm.style.display = "block";
+    completedForm.style.display = "flex";
+    return;
   }
   document.getElementById(`step_${stepNumber}`).style.display = "block";
 }
