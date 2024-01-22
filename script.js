@@ -3,9 +3,27 @@ const step_one_nextBtn = document.getElementById("next_btn_1");
 const step_two_nextBtn = document.getElementById("next_btn_2");
 const step_three_nextBtn = document.getElementById("next_btn_3");
 const step_four_nextBtn = document.getElementById("next_btn_4");
-
-step_two_nextBtn.addEventListener("click", );
-step_three_nextBtn.addEventListener("click", );
-step_four_nextBtn.addEventListener("click", );
+const completedForm = document.getElementById("thankyou")
 
 
+
+let currentStep = 1;
+function showStep(stepNumber){
+  allSteps.forEach((step) => {
+    step.style.display = 'none'
+  })
+  document.getElementById(`step_${stepNumber}`).style.display = 'block';
+}
+function nextStep(){
+  currentStep++;
+  if(currentStep === 4){
+    completedForm.style.display = 'block'
+  }
+  showStep(currentStep);
+
+}
+showStep(currentStep)
+step_one_nextBtn.addEventListener("click", nextStep );
+step_two_nextBtn.addEventListener("click", nextStep);
+step_three_nextBtn.addEventListener("click",nextStep );
+step_four_nextBtn.addEventListener("click", nextStep);
