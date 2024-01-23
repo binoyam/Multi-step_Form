@@ -1,3 +1,4 @@
+import { stepOneCheck } from "./stepOneFormCheck";
 const allSteps = document.querySelectorAll(".step_container");
 const step_one_nextBtn = document.getElementById("next_btn_1");
 const step_two_nextBtn = document.getElementById("next_btn_2");
@@ -10,54 +11,8 @@ const step_four_backBtn = document.getElementById("back_btn_4");
 const completedForm = document.getElementById("thankyou");
 
 const stepCircle = document.querySelectorAll(".step_circle");
-const stepOneForm = document.getElementById("step_one_form");
+console.log(stepCircle);
 let currentStep = 1;
-
-function stepOneCheck(e) {
-  e.preventDefault();
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const phoneInput = document.getElementById("phone_number");
-
-  const nameError = document.querySelector(".name_error");
-  const emailError = document.querySelector(".email_error");
-  const phoneError = document.querySelector(".phone_error");
-
-  if (nameInput.value.trim() === "") {
-    nameError.style.display = "block";
-    nameInput.classList.add("error_border");
-  } else {
-    nameError.style.display = "none";
-    nameInput.classList.remove("error_border");
-  }
-  if (emailInput.value.trim() === "") {
-    emailError.style.display = "block";
-    emailInput.classList.add("error_border");
-  } else {
-    emailError.style.display = "none";
-    emailInput.classList.remove("error_border");
-  }
-  if (phoneInput.value.trim() === "") {
-    phoneError.style.display = "block";
-    phoneInput.classList.add("error_border");
-  } else {
-    phoneError.style.display = "none";
-    phoneInput.classList.remove("error_border");
-  }
-  if (
-    nameInput.value.trim() != "" &&
-    emailInput.value.trim() != "" &&
-    phoneInput.value.trim() != ""
-  ) {
-    currentStep++;
-
-    stepCircle.forEach((circle) => {
-      circle.classList.remove("active");
-    });
-    stepCircle[currentStep].classList.add("active");
-    nextStep(2);
-  }
-}
 
 
 function showStep(stepNumber) {
@@ -81,9 +36,7 @@ function previousStep(stepNumber) {
 }
 
 step_one_nextBtn.addEventListener("click", (e) => {
-  stepOneCheck(e)
-    
-  
+  stepOneCheck(e);
 });
 step_two_nextBtn.addEventListener("click", () => {
   nextStep(3);
