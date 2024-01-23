@@ -10,8 +10,9 @@ const step_four_backBtn = document.getElementById("back_btn_4");
 const completedForm = document.getElementById("thankyou");
 
 const stepCircle = document.querySelectorAll(".step_circle");
-console.log(stepCircle);
+
 let currentStep = 1;
+
 function stepOneCheck(e) {
   e.preventDefault();
   const nameInput = document.getElementById("name");
@@ -22,6 +23,8 @@ function stepOneCheck(e) {
   const emailError = document.querySelector(".email_error");
   const phoneError = document.querySelector(".phone_error");
 
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (nameInput.value.trim() === "") {
     nameError.style.display = "block";
     nameInput.classList.add("error_border");
@@ -29,7 +32,7 @@ function stepOneCheck(e) {
     nameError.style.display = "none";
     nameInput.classList.remove("error_border");
   }
-  if (emailInput.value.trim() === "") {
+  if (emailInput.value.trim() === "" || !emailPattern.test(emailInput.value)) {
     emailError.style.display = "block";
     emailInput.classList.add("error_border");
   } else {
@@ -46,27 +49,29 @@ function stepOneCheck(e) {
   if (
     nameInput.value.trim() != "" &&
     emailInput.value.trim() != "" &&
+    emailPattern.test(emailInput.value) &&
     phoneInput.value.trim() != ""
   ) {
-    currentStep++;
-
-    stepCircle.forEach((circle) => {
-      circle.classList.remove("active");
-    });
-    stepCircle[currentStep].classList.add("active");
     nextStep(2);
   }
+}
+
+function showCircle() {
+  stepCircle.forEach((circle) => {
+    circle.classList.remove("active");
+  });
+  stepCircle[currentStep].classList.add("active");
 }
 
 function showStep(stepNumber) {
   allSteps.forEach((step) => {
     step.style.display = "none";
   });
-  if (stepNumber == 5) {
-    document.getElementById("step_4").style.display = "none";
-    completedForm.style.display = "flex";
-    return;
-  }
+  // if (stepNumber == 5) {
+  //   document.getElementById("step_4").style.display = "none";
+  //   completedForm.style.display = "flex";
+  //   return;
+  // }
   document.getElementById(`step_${stepNumber}`).style.display = "block";
 }
 function nextStep(stepNumber) {
