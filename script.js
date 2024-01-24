@@ -13,7 +13,7 @@ const stepCircle = document.querySelectorAll(".step_circle");
 
 let currentStep = 1;
 function stepOneCheck(e, step) {
-  e.preventDefault();
+  // e.preventDefault();
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const phoneInput = document.getElementById("phone_number");
@@ -55,19 +55,24 @@ function stepOneCheck(e, step) {
   }
 }
 
-// function showCircle() {
-//   stepCircle.forEach((circle) => {
-//     circle.classList.remove("active");
-//   });
-//   stepCircle[currentStep].classList.add("active");
-// }
+function showCircle() {
+  stepCircle.forEach((circle) => {
+    circle.classList.remove("active");
+  });
+  stepCircle[currentStep].classList.add("active");
+}
 
-function showStep(currentStep) {
+function showStep(stepNumber) {
   allSteps.forEach((step) => {
     step.style.display = "none";
+    const visibleStep = document.getElementById(`step_${stepNumber}`);
+    if(stepNumber === 5){
+      visibleStep.style.display = "flex";
+      return;
+    }
+    visibleStep.style.display = "block";
   });
  
-    document.getElementById(`step_${currentStep}`).style.display = "block";
  
 }
 function nextStep(stepNumber) {
@@ -76,11 +81,12 @@ function nextStep(stepNumber) {
 }
 function previousStep(stepNumber) {
   currentStep = stepNumber;
-  // showStep(currentStep);
+  showStep(currentStep);
 }
 const nextBtns = document.querySelectorAll(".next_btn");
 nextBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    e.preventDefault()
     const step = parseInt(btn.dataset.step);
     if (step === 1) {
       stepOneCheck(e, 1);
@@ -89,25 +95,12 @@ nextBtns.forEach((btn) => {
     }
   });
 });
-// step_one_nextBtn.addEventListener("click", (e) => {
-//   stepOneCheck(e);
-// });
-// step_two_nextBtn.addEventListener("click", () => {
-//   nextStep(3);
-// });
-// step_three_nextBtn.addEventListener("click", () => {
-//   nextStep(4);
-// });
-// step_four_nextBtn.addEventListener("click", () => {
-//   nextStep(5);
-// });
+const backBtns = document.querySelectorAll(".go_back_btn");
+backBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    const step = parseInt(btn.dataset.step);
+    previousStep(step - 1)
+  });
+});
 
-step_two_backBtn.addEventListener("click", () => {
-  previousStep(1);
-});
-step_three_backBtn.addEventListener("click", () => {
-  previousStep(2);
-});
-step_four_backBtn.addEventListener("click", () => {
-  previousStep(3);
-});

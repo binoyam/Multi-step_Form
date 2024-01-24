@@ -1,4 +1,7 @@
 /* STEP 5 / THANKYOU */
+.step_5{
+  display: none;
+}
 .thankyou_div {
   min-width: 450px;
   min-height: 505px;
