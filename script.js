@@ -9,11 +9,8 @@ const step_three_backBtn = document.getElementById("back_btn_3");
 const step_four_backBtn = document.getElementById("back_btn_4");
 const completedForm = document.getElementById("thankyou");
 
-const stepCircle = document.querySelectorAll(".step_circle");
-
 let currentStep = 1;
-function stepOneCheck(e, step) {
-  // e.preventDefault();
+function stepOneCheck(step) {
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const phoneInput = document.getElementById("phone_number");
@@ -55,26 +52,29 @@ function stepOneCheck(e, step) {
   }
 }
 
-function showCircle() {
-  stepCircle.forEach((circle) => {
-    circle.classList.remove("active");
-  });
-  stepCircle[currentStep].classList.add("active");
-}
-
 function showStep(stepNumber) {
+  if (stepNumber < 5) {
+    showCircle(stepNumber - 1);
+  }
   allSteps.forEach((step) => {
     step.style.display = "none";
     const visibleStep = document.getElementById(`step_${stepNumber}`);
-    if(stepNumber === 5){
+    if (stepNumber === 5) {
       visibleStep.style.display = "flex";
       return;
     }
     visibleStep.style.display = "block";
   });
- 
- 
 }
+
+const stepCircle = document.querySelectorAll(".step_circle");
+function showCircle(stepNumber) {
+  stepCircle.forEach((circle) => {
+    circle.classList.remove("active");
+  });
+  stepCircle[stepNumber].classList.add("active");
+}
+// console.log(stepCircle);
 function nextStep(stepNumber) {
   currentStep = stepNumber;
   showStep(currentStep);
@@ -86,10 +86,10 @@ function previousStep(stepNumber) {
 const nextBtns = document.querySelectorAll(".next_btn");
 nextBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const step = parseInt(btn.dataset.step);
     if (step === 1) {
-      stepOneCheck(e, 1);
+      stepOneCheck(1);
     } else {
       nextStep(step + 1);
     }
@@ -98,9 +98,8 @@ nextBtns.forEach((btn) => {
 const backBtns = document.querySelectorAll(".go_back_btn");
 backBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const step = parseInt(btn.dataset.step);
-    previousStep(step - 1)
+    previousStep(step - 1);
   });
 });
-
