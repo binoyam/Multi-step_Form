@@ -71,8 +71,8 @@ const stepCircle = document.querySelectorAll(".step_circle");
 function showCircle(stepNumber) {
   stepCircle.forEach((circle) => {
     circle.classList.remove("active");
+    stepCircle[stepNumber].classList.add("active");
   });
-  stepCircle[stepNumber].classList.add("active");
 }
 // console.log(stepCircle);
 function nextStep(stepNumber) {
