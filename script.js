@@ -12,8 +12,7 @@ const completedForm = document.getElementById("thankyou");
 const stepCircle = document.querySelectorAll(".step_circle");
 
 let currentStep = 1;
-
-function stepOneCheck(e) {
+function stepOneCheck(e, step) {
   e.preventDefault();
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
@@ -52,27 +51,24 @@ function stepOneCheck(e) {
     emailPattern.test(emailInput.value) &&
     phoneInput.value.trim() != ""
   ) {
-    nextStep(2);
+    nextStep(step + 1);
   }
 }
 
-function showCircle() {
-  stepCircle.forEach((circle) => {
-    circle.classList.remove("active");
-  });
-  stepCircle[currentStep].classList.add("active");
-}
+// function showCircle() {
+//   stepCircle.forEach((circle) => {
+//     circle.classList.remove("active");
+//   });
+//   stepCircle[currentStep].classList.add("active");
+// }
 
-function showStep(stepNumber) {
+function showStep(currentStep) {
   allSteps.forEach((step) => {
     step.style.display = "none";
   });
-  // if (stepNumber == 5) {
-  //   document.getElementById("step_4").style.display = "none";
-  //   completedForm.style.display = "flex";
-  //   return;
-  // }
-  document.getElementById(`step_${stepNumber}`).style.display = "block";
+ 
+    document.getElementById(`step_${currentStep}`).style.display = "block";
+ 
 }
 function nextStep(stepNumber) {
   currentStep = stepNumber;
@@ -80,21 +76,31 @@ function nextStep(stepNumber) {
 }
 function previousStep(stepNumber) {
   currentStep = stepNumber;
-  showStep(currentStep);
+  // showStep(currentStep);
 }
-
-step_one_nextBtn.addEventListener("click", (e) => {
-  stepOneCheck(e);
+const nextBtns = document.querySelectorAll(".next_btn");
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const step = parseInt(btn.dataset.step);
+    if (step === 1) {
+      stepOneCheck(e, 1);
+    } else {
+      nextStep(step + 1);
+    }
+  });
 });
-step_two_nextBtn.addEventListener("click", () => {
-  nextStep(3);
-});
-step_three_nextBtn.addEventListener("click", () => {
-  nextStep(4);
-});
-step_four_nextBtn.addEventListener("click", () => {
-  nextStep(5);
-});
+// step_one_nextBtn.addEventListener("click", (e) => {
+//   stepOneCheck(e);
+// });
+// step_two_nextBtn.addEventListener("click", () => {
+//   nextStep(3);
+// });
+// step_three_nextBtn.addEventListener("click", () => {
+//   nextStep(4);
+// });
+// step_four_nextBtn.addEventListener("click", () => {
+//   nextStep(5);
+// });
 
 step_two_backBtn.addEventListener("click", () => {
   previousStep(1);
