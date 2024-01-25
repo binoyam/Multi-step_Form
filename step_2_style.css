@@ -5,6 +5,7 @@
 .step_two_form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 /* PLANS WRAPPER */
 .plans {
@@ -49,7 +50,9 @@
   /* display: block; */
   color: var(--Marine_blue);
   margin-top: 0.5rem;
+  font-size: 0.85rem;
   font-weight: 500;
+  /* transition: all 0.5s ease-out; */
 }
 /* TOGGLE SWITCH */
 .plan_toggle_switch {
@@ -111,7 +114,12 @@
 }
 .monthly,
 .yearly {
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--Cool_gray);
+}
+.active_plan {
+  color: var(--Marine_blue);
 }
 /* END OF TOGGLE SWITCH */
 /* STEP TWO BUTTONS WRAPPER */

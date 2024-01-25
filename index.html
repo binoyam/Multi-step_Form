@@ -109,7 +109,7 @@
                   type="number"
                   placeholder="e.g.+1 234 567 890"
                   id="phone_number"
-                  value=1234567890
+                  value="1234567890"
                   required
                 />
               </div>
@@ -169,15 +169,16 @@
                   <span class="text_add">2 months free</span>
                 </div>
               </div>
-
+              <!-- plan toggle -->
               <div class="plan_toggle_switch">
-                <span class="monthly">Monthly</span>
+                <span class="monthly plan_type">Monthly</span>
                 <label class="switch">
-                  <input id="checkbox" type="checkbox" class="toggle_input" />
+                  <input name="toggle" type="checkbox" class="toggle_input" />
                   <span class="slider"></span>
                 </label>
                 <span class="yearly">Yearly</span>
               </div>
+
               <div class="buttons">
                 <button class="go_back_btn" id="back_btn_2" data-step="2">
                   Go Back

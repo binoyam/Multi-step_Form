@@ -103,12 +103,11 @@ backBtns.forEach((btn) => {
     previousStep(step - 1);
   });
 });
-/* STEP 2 FORM CHECK*/
+/* STEP 2 FORM: SHOW SELECTED PLAN*/
 const plans = document.querySelectorAll(".plan");
 let selectedPlan = plans[0];
-console.log(plans[0]);
 plans.forEach((plan) => {
-  plan.addEventListener("click", (e) => {
+  plan.addEventListener("click", () => {
     if (selectedPlan !== null) {
       selectedPlan.classList.remove("selected");
     }
@@ -119,4 +118,25 @@ plans.forEach((plan) => {
       selectedPlan = null;
     }
   });
+});
+
+/* STEP 2: FORM : TOOGLE SWITCH MONTHLY/ YEARLY */
+const toggleInput = document.querySelector(".toggle_input");
+const discountText = document.querySelectorAll(".text_add");
+toggleInput.addEventListener("change", () => {
+  const monthly = document.querySelector(".monthly");
+  const yearly = document.querySelector(".yearly");
+  if (toggleInput.checked) {
+    discountText.forEach((text) => {
+      text.style.display = "block";
+    });
+    yearly.classList.add("active_plan")
+    monthly.classList.remove("active_plan")
+  } else {
+    discountText.forEach((text) => {
+      text.style.display = "none";
+    });
+    monthly.classList.add("active_plan")
+    yearly.classList.remove("active_plan")
+  }
 });
