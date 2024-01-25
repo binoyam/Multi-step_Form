@@ -43,10 +43,10 @@ function stepOneCheck(step) {
     phoneInput.classList.remove("error_border");
   }
   if (
-    nameInput.value.trim() != "" &&
-    emailInput.value.trim() != "" &&
+    nameInput.value.trim() !== "" &&
+    emailInput.value.trim() !== "" &&
     emailPattern.test(emailInput.value) &&
-    phoneInput.value.trim() != ""
+    phoneInput.value.trim() !== ""
   ) {
     nextStep(step + 1);
   }
@@ -105,8 +105,8 @@ backBtns.forEach((btn) => {
 });
 /* STEP 2 FORM CHECK*/
 const plans = document.querySelectorAll(".plan");
-let selectedPlan = null;
-console.log(plans);
+let selectedPlan = plans[0];
+console.log(plans[0]);
 plans.forEach((plan) => {
   plan.addEventListener("click", (e) => {
     if (selectedPlan !== null) {

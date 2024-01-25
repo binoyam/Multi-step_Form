@@ -19,6 +19,7 @@
   border-radius: 0.5rem;
   border: 1px solid var(--Light_gray);
   cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 .selected {
   border: 1px solid var(--Purplish_blue);
