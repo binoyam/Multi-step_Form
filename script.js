@@ -103,3 +103,20 @@ backBtns.forEach((btn) => {
     previousStep(step - 1);
   });
 });
+/* STEP 2 FORM CHECK*/
+const plans = document.querySelectorAll(".plan");
+let selectedPlan = null;
+console.log(plans);
+plans.forEach((plan) => {
+  plan.addEventListener("click", (e) => {
+    if (selectedPlan !== null) {
+      selectedPlan.classList.remove("selected");
+    }
+    if (selectedPlan !== plan) {
+      plan.classList.add("selected");
+      selectedPlan = plan;
+    } else {
+      selectedPlan = null;
+    }
+  });
+});

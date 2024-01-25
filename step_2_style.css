@@ -18,6 +18,7 @@
   padding: 1rem 0.6rem;
   border-radius: 0.5rem;
   border: 1px solid var(--Light_gray);
+  cursor: pointer;
 }
 .selected {
   border: 1px solid var(--Purplish_blue);
